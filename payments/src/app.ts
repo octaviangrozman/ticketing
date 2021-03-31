@@ -11,7 +11,8 @@ app.use(json());
 app.use(
   cookieSession({
     signed: false, // don't encrypt, so it's language agnostic
-    secure: process.env.NODE_ENV !== "test", // use https
+    // secure: process.env.NODE_ENV !== "test", // use https
+    secure: false,
   })
 );
 app.use(currentUser);
